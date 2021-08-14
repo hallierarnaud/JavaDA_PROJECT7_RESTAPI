@@ -10,11 +10,11 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema poseidon
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `poseidon` DEFAULT CHARACTER SET utf8mb4
+CREATE SCHEMA IF NOT EXISTS `demo` DEFAULT CHARACTER SET utf8mb4
 COLLATE utf8mb4_0900_ai_ci ;
-USE `poseidon` ;
+USE `demo` ;
 
-CREATE TABLE IF NOT EXISTS `poseidon`.`BidList` (
+CREATE TABLE IF NOT EXISTS `demo`.`BidList` (
   `BidListId` tinyint(4) NOT NULL AUTO_INCREMENT,
   `account` VARCHAR(30) NOT NULL,
   `type` VARCHAR(30) NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `poseidon`.`BidList` (
   PRIMARY KEY (`BidListId`)
 );
 
-CREATE TABLE IF NOT EXISTS `poseidon`.`Trade` (
+CREATE TABLE IF NOT EXISTS `demo`.`Trade` (
   `TradeId` tinyint(4) NOT NULL AUTO_INCREMENT,
   `account` VARCHAR(30) NOT NULL,
   `type` VARCHAR(30) NOT NULL,
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `poseidon`.`Trade` (
   PRIMARY KEY (`TradeId`)
 );
 
-CREATE TABLE IF NOT EXISTS `poseidon`.`CurvePoint` (
+CREATE TABLE IF NOT EXISTS `demo`.`CurvePoint` (
   `Id` tinyint(4) NOT NULL AUTO_INCREMENT,
   `CurveId` tinyint,
   `asOfDate` TIMESTAMP,
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `poseidon`.`CurvePoint` (
   PRIMARY KEY (`Id`)
 );
 
-CREATE TABLE IF NOT EXISTS `poseidon`.`Rating` (
+CREATE TABLE IF NOT EXISTS `demo`.`Rating` (
   `Id` tinyint(4) NOT NULL AUTO_INCREMENT,
   `moodysRating` VARCHAR(125),
   `sandPRating` VARCHAR(125),
@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `poseidon`.`Rating` (
   PRIMARY KEY (`Id`)
 );
 
-CREATE TABLE IF NOT EXISTS `poseidon`.`RuleName` (
+CREATE TABLE IF NOT EXISTS `demo`.`RuleName` (
   `Id` tinyint(4) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(125),
   `description` VARCHAR(125),
@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `poseidon`.`RuleName` (
   PRIMARY KEY (`Id`)
 );
 
-CREATE TABLE IF NOT EXISTS `poseidon`.`Users` (
+CREATE TABLE IF NOT EXISTS `demo`.`Users` (
   `Id` tinyint(4) NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(125),
   `password` VARCHAR(125),
