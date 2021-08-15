@@ -15,7 +15,7 @@ COLLATE utf8mb4_0900_ai_ci ;
 USE `demo` ;
 
 CREATE TABLE IF NOT EXISTS `demo`.`BidList` (
-  `BidListId` tinyint(4) NOT NULL AUTO_INCREMENT,
+  `Id` tinyint(4) NOT NULL AUTO_INCREMENT,
   `account` VARCHAR(30) NOT NULL,
   `type` VARCHAR(30) NOT NULL,
   `bidQuantity` DOUBLE,
@@ -38,11 +38,11 @@ CREATE TABLE IF NOT EXISTS `demo`.`BidList` (
   `sourceListId` VARCHAR(125),
   `side` VARCHAR(125),
 
-  PRIMARY KEY (`BidListId`)
+  PRIMARY KEY (`Id`)
 );
 
 CREATE TABLE IF NOT EXISTS `demo`.`Trade` (
-  `TradeId` tinyint(4) NOT NULL AUTO_INCREMENT,
+  `Id` tinyint(4) NOT NULL AUTO_INCREMENT,
   `account` VARCHAR(30) NOT NULL,
   `type` VARCHAR(30) NOT NULL,
   `buyQuantity` DOUBLE,
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `demo`.`Trade` (
   `sourceListId` VARCHAR(125),
   `side` VARCHAR(125),
 
-  PRIMARY KEY (`TradeId`)
+  PRIMARY KEY (`Id`)
 );
 
 CREATE TABLE IF NOT EXISTS `demo`.`CurvePoint` (

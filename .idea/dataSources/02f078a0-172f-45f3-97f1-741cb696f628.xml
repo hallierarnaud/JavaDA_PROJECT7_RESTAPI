@@ -921,7 +921,7 @@ SELECT|sys.sys_config:null
     <table id="289" parent="2" name="rulename"/>
     <table id="290" parent="2" name="trade"/>
     <table id="291" parent="2" name="users"/>
-    <column id="292" parent="286" name="BidListId">
+    <column id="292" parent="286" name="Id">
       <Position>1</Position>
       <DataType>tinyint|0s</DataType>
       <NotNull>1</NotNull>
@@ -1015,7 +1015,7 @@ SELECT|sys.sys_config:null
     </column>
     <key id="314" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>BidListId</ColNames>
+      <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="315" parent="287" name="Id">
@@ -1111,7 +1111,7 @@ SELECT|sys.sys_config:null
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="336" parent="290" name="TradeId">
+    <column id="336" parent="290" name="Id">
       <Position>1</Position>
       <DataType>tinyint|0s</DataType>
       <NotNull>1</NotNull>
@@ -1201,7 +1201,7 @@ SELECT|sys.sys_config:null
     </column>
     <key id="357" parent="290" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>TradeId</ColNames>
+      <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="358" parent="291" name="Id">
