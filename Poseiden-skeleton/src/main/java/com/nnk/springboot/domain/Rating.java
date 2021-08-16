@@ -1,6 +1,7 @@
 package com.nnk.springboot.domain;
 
 import javax.persistence.*;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.sql.Timestamp;
@@ -28,6 +29,7 @@ public class Rating {
   private String fitchRating;
 
   @Column(name = "orderNumber")
+  @Digits(message = "Order number is numeric", integer = 10, fraction = 0)
   private Integer orderNumber;
 
   public Rating(String moodysRating, String sandPRating, String fitchRating, Integer orderNumber) {

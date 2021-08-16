@@ -1,14 +1,16 @@
 package com.nnk.springboot.domain;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-
-import java.sql.Date;
 import java.sql.Timestamp;
 
-import lombok.AllArgsConstructor;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.Digits;
+
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @Entity
@@ -27,15 +29,19 @@ public class Trade {
   private String type;
 
   @Column(name = "buyQuantity")
+  @Digits(message = "Buy quantity is numeric", integer = 10, fraction = 2)
   private Double buyQuantity;
 
   @Column(name = "sellQuantity")
+  @Digits(message = "Sell quantity is numeric", integer = 10, fraction = 2)
   private Double sellQuantity;
 
   @Column(name = "buyPrice")
+  @Digits(message = "Buy price is numeric", integer = 10, fraction = 2)
   private Double buyPrice;
 
   @Column(name = "sellPrice")
+  @Digits(message = "Sell price is numeric", integer = 10, fraction = 2)
   private Double sellPrice;
 
   @Column(name = "benchmark", length = 125)

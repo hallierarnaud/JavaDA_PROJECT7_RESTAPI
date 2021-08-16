@@ -1,16 +1,16 @@
 package com.nnk.springboot.domain;
 
-import org.springframework.beans.factory.annotation.Required;
-
-import javax.persistence.*;
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.NotBlank;
-import java.sql.Date;
 import java.sql.Timestamp;
 
-import lombok.AllArgsConstructor;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.Digits;
+
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @Entity
@@ -29,15 +29,19 @@ public class BidList {
   private String type;
 
   @Column(name = "bidQuantity")
+  @Digits(message = "Bid quantity is numeric", integer = 10, fraction = 2)
   private Double bidQuantity;
 
   @Column(name = "askQuantity")
+  @Digits(message = "Ask quantity is numeric", integer = 10, fraction = 2)
   private Double askQuantity;
 
   @Column(name = "bid")
+  @Digits(message = "Bid is numeric", integer = 10, fraction = 2)
   private Double bid;
 
   @Column(name = "ask")
+  @Digits(message = "Ask is numeric", integer = 10, fraction = 2)
   private Double ask;
 
   @Column(name = "benchmark", length = 125)
