@@ -5,6 +5,7 @@ import com.nnk.springboot.repositories.RatingRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -24,6 +25,7 @@ public class RatingController {
     private static Logger logger = LoggerFactory.getLogger(RatingController.class);
 
     // Inject Rating service
+    @Autowired
     private RatingRepository ratingRepository;
 
     @RequestMapping("/rating/list")
