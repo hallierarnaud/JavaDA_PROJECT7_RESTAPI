@@ -32,7 +32,7 @@ public class RuleNameController {
     public String home(Model model) {
         // find all RuleName, add to model
         logger.info("Response : Rule names were found");
-        model.addAttribute("ruleNames", ruleNameRepository);
+        model.addAttribute("ruleNames", ruleNameRepository.findAll());
         return "ruleName/list";
     }
 
@@ -59,7 +59,7 @@ public class RuleNameController {
         // get RuleName by Id and to model then show to the form
         logger.info("Response : Update form for rule name {} was found", id);
         RuleName rule = ruleNameRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid rule Id:" + id));
-        model.addAttribute("ruleNames", rule);
+        model.addAttribute("ruleName", rule);
         return "ruleName/update";
     }
 

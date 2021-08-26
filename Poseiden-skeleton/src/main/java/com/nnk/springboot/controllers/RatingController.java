@@ -59,7 +59,7 @@ public class RatingController {
         // get Rating by Id and to model then show to the form
         logger.info("Response : Update form for rating {} was found", id);
         Rating rating = ratingRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid rating Id:" + id));
-        model.addAttribute("ratings", rating);
+        model.addAttribute("rating", rating);
         return "rating/update";
     }
 

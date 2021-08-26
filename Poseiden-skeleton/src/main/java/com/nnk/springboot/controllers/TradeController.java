@@ -54,7 +54,7 @@ public class TradeController {
         return "trade/add";
     }
 
-    @GetMapping("/trade/update/{id}")
+    @GetMapping("/tradeList/update/{id}")
     public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
         // get Trade by Id and to model then show to the form
         logger.info("Response : Update form for trade {} was found", id);

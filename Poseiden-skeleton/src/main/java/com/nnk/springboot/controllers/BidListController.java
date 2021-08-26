@@ -59,7 +59,7 @@ public class BidListController {
         // get Bid by Id and to model then show to the form
         logger.info("Response : Update form for bid {} was found", id);
         BidList bid = bidListRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid bid Id:" + id));
-        model.addAttribute("bidLists", bid);
+        model.addAttribute("bidList", bid);
         return "bidList/update";
     }
 
