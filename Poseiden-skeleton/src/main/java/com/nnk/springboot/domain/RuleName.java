@@ -18,21 +18,27 @@ public class RuleName {
   private Integer id;
 
   @Column(name = "name", length = 125)
+  @NotBlank(message = "Name is mandatory")
   private String name;
 
   @Column(name = "description", length = 125)
+  @NotBlank(message = "Description is mandatory")
   private String description;
 
   @Column(name = "json", length = 125)
+  @NotBlank(message = "json is mandatory")
   private String json;
 
   @Column(name = "template", length = 512)
+  @NotBlank(message = "template is mandatory")
   private String template;
 
   @Column(name = "sqlStr", length = 125)
+  @NotBlank(message = "sqlStr is mandatory")
   private String sqlStr;
 
   @Column(name = "sqlPart", length = 125)
+  @NotBlank(message = "sqlPart is mandatory")
   private String sqlPart;
 
   public RuleName(String name, String description, String json, String template, String sqlStr, String sqlPart) {

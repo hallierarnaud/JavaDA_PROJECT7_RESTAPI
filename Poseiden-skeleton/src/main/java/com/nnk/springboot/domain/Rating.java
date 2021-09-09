@@ -20,12 +20,15 @@ public class Rating {
   private Integer id;
 
   @Column(name = "moodysRating", length = 125)
+  @NotBlank(message = "Moodys rating is mandatory")
   private String moodysRating;
 
   @Column(name = "sandPRating", length = 125)
+  @NotBlank(message = "SandP rating is mandatory")
   private String sandPRating;
 
   @Column(name = "fitchRating", length = 125)
+  @NotBlank(message = "Fitch rating is mandatory")
   private String fitchRating;
 
   @Column(name = "orderNumber")

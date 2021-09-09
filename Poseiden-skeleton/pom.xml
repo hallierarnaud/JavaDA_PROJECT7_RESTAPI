@@ -107,7 +107,6 @@
 				<configuration>
 					<excludes>
 						<exclude>com/nnk/springboot/domain/**/*</exclude>
-						<exclude>com/nnk/springboot/controllers/**/*</exclude>
 					</excludes>
 				</configuration>
 				<executions>
