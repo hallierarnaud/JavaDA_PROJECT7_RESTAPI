@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import lombok.Data;
 
@@ -23,12 +25,15 @@ public class BidList {
   private Integer BidListId;
 
   @Column(name = "account", nullable = false, length = 30)
+  @NotBlank(message = "Account is mandatory")
   private String account;
 
   @Column(name = "type", nullable = false, length = 30)
+  @NotBlank(message = "Type is mandatory")
   private String type;
 
   @Column(name = "bidQuantity")
+  @NotNull(message = "Bid quantity must not be null")
   @Digits(message = "Bid quantity is numeric", integer = 10, fraction = 2)
   private Double bidQuantity;
 
