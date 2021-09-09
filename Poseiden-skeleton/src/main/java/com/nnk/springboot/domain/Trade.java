@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import lombok.Data;
 
@@ -23,12 +25,15 @@ public class Trade {
   private Integer tradeId;
 
   @Column(name = "account", nullable = false, length = 30)
+  @NotBlank(message = "Account is mandatory")
   private String account;
 
   @Column(name = "type", nullable = false, length = 30)
+  @NotBlank(message = "Type is mandatory")
   private String type;
 
   @Column(name = "buyQuantity")
+  @NotNull(message = "Buy quantity must not be null")
   @Digits(message = "Buy quantity is numeric", integer = 10, fraction = 2)
   private Double buyQuantity;
 
@@ -86,9 +91,10 @@ public class Trade {
   @Column(name = "side", length = 125)
   private String side;
 
-  public Trade(String account, String type) {
+  public Trade(String account, String type, Double buyQuantity) {
     this.account = account;
     this.type = type;
+    this.buyQuantity = buyQuantity;
   }
 
   public Trade() {
