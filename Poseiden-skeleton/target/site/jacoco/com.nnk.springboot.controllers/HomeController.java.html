@@ -16,14 +16,14 @@ import lombok.extern.slf4j.Slf4j;
 
 	@RequestMapping(&quot;/&quot;)
 	public String home(Model model) {
-<span class="nc" id="L19">		logger.info(&quot;Response : Home was found&quot;);</span>
-<span class="nc" id="L20">		return &quot;home&quot;;</span>
+<span class="fc" id="L19">		logger.info(&quot;Response : Home was found&quot;);</span>
+<span class="fc" id="L20">		return &quot;home&quot;;</span>
 	}
 
 	@RequestMapping(&quot;/admin/home&quot;)
 	public String adminHome(Model model) {
-<span class="nc" id="L25">		logger.info(&quot;Response : Admin home was found&quot;);</span>
-<span class="nc" id="L26">		return &quot;redirect:/bidList/list&quot;;</span>
+<span class="fc" id="L25">		logger.info(&quot;Response : Admin home was found&quot;);</span>
+<span class="fc" id="L26">		return &quot;redirect:/bidList/list&quot;;</span>
 	}
 
 

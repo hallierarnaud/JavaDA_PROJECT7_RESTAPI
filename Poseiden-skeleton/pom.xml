@@ -107,6 +107,7 @@
 				<configuration>
 					<excludes>
 						<exclude>com/nnk/springboot/domain/**/*</exclude>
+						<exclude>com/nnk/springboot/controllers/**/LoginController.class</exclude>
 					</excludes>
 				</configuration>
 				<executions>
